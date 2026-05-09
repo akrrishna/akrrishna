@@ -72,7 +72,7 @@ postFiles.forEach(file => {
 
   const title = `${frontmatter.title || 'Untitled'} | Krishna Neupane`;
   const description = frontmatter.excerpt || 'Blog post by Krishna Neupane';
-  const url = `${BASE_URL}/blogs/${slug}`;
+  const url = `${BASE_URL}/blogs/${slug}/`;
   const image = `${BASE_URL}/images/og-site.png`;
 
   const extraMeta = `  <meta name="twitter:card" content="summary_large_image" />
@@ -93,7 +93,7 @@ postFiles.forEach(file => {
   const html = injectMeta(baseHtml, {
     title: 'Blogs | Krishna Neupane',
     description: 'Articles and stories by Krishna Neupane on technology, education, culture, and more.',
-    url: `${BASE_URL}/blogs`,
+    url: `${BASE_URL}/blogs/`,
   });
   writeStaticPage(path.join(blogsDir, 'index.html'), html);
   console.log('Generated: /blogs/index.html');
@@ -105,7 +105,7 @@ postFiles.forEach(file => {
   const html = injectMeta(baseHtml, {
     title: 'Projects | Krishna Neupane',
     description: 'Web development and software projects built by Krishna Neupane.',
-    url: `${BASE_URL}/projects`,
+    url: `${BASE_URL}/projects/`,
   });
   writeStaticPage(path.join(projectsDir, 'index.html'), html);
   console.log('Generated: /projects/index.html');
