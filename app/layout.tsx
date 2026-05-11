@@ -8,7 +8,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Krishna Neupane - Portfolio',
   description: 'Portfolio of Krishna Neupane - Educator, Web Dev, Content Writer',
-  metadataBase: new URL('https://akrrishna.github.io'),
+  metadataBase: new URL('https://npkrishna.com'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

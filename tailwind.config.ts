@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 import typography from "@tailwindcss/typography";
-import lineClamp from "@tailwindcss/line-clamp";
 
 export default {
 	darkMode: ["class"],
@@ -153,6 +152,5 @@ export default {
 	plugins: [
 		tailwindcssAnimate,
 		typography,
-		lineClamp,
 	],
 } satisfies Config;
