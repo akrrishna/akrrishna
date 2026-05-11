@@ -5,6 +5,7 @@ import BlogPostLayout from '@/components/BlogPostLayout'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
 
 type Params = Promise<{ slug: string }>
 
@@ -44,6 +45,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         components={mdxComponents}
         options={{
           mdxOptions: {
+            remarkPlugins: [remarkGfm],
             rehypePlugins: [rehypeSlug],
           },
         }}
